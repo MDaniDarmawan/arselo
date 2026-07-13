@@ -1,0 +1,2509 @@
+/* ==========================================
+   CSS Variables
+   ========================================== */
+:root {
+    /* Colors */
+    --color-primary: #408fd9;
+    --color-dark: #092c4c;
+    --color-gray: #737373;
+    --color-white: #ffffff;
+    --color-bg-light: #e4ffff;
+    --color-bg-footer: #f9f9f9;
+
+    /* Typography */
+    --font-family: 'Montserrat', sans-serif;
+    --font-regular: 400;
+    --font-bold: 700;
+
+    /* Spacing */
+    --spacing-xs: 10px;
+    --spacing-sm: 20px;
+    --spacing-md: 30px;
+    --spacing-lg: 50px;
+    --spacing-xl: 100px;
+
+    /* Border Radius */
+    --radius-sm: 10px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    /* Container */
+    --container-width: 1240px;
+}
+
+/* ==========================================
+   Reset & Base Styles
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-regular);
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ==========================================
+   Navbar Styles
+   ========================================== */
+.navbar {
+    background-color: var(--color-white);
+    padding: var(--spacing-md) var(--spacing-xl);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 53px;
+    width: auto;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-dark);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+    font-weight: var(--font-bold);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.hero-section {
+    background: linear-gradient(59.95deg, rgba(64, 143, 217, 0.1) 0%, rgba(255, 255, 255, 0) 24.99%);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    margin: var(--spacing-xs) 0;
+}
+
+.hero-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: var(--spacing-md) 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 524px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: var(--font-bold);
+    line-height: 61.6px;
+    color: var(--color-dark);
+}
+
+.hero-title span {
+    display: block;
+    margin-bottom: 28px;
+}
+
+.hero-title .hero-title-highlight {
+    color: var(--color-primary);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: var(--font-bold);
+    font-size: 16px;
+    line-height: 22.4px;
+    padding: 15px 20px;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    text-align: center;
+    width: fit-content;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(64, 143, 217, 0.3);
+}
+
+.hero-image {
+    width: 483px;
+    height: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================
+   Sambutan Kepala Sekolah
+   ========================================== */
+.sambutan-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.sambutan-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.sambutan-image {
+    position: relative;
+    width: 415px;
+    height: 468px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sambutan-image::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-md);
+    z-index: 1;
+}
+
+.sambutan-image img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 469px;
+    width: auto;
+    z-index: 2;
+    object-fit: cover;
+}
+
+.sambutan-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.section-line {
+    width: 94px;
+    height: 7px;
+    background-color: var(--color-primary);
+}
+
+.section-title {
+    font-size: 44px;
+    font-weight: var(--font-bold);
+    color: var(--color-primary);
+    line-height: normal;
+}
+
+.sambutan-text {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+.sambutan-text p {
+    margin-bottom: 0.8em;
+}
+
+.sambutan-signature {
+    font-weight: var(--font-bold);
+    color: var(--color-dark);
+}
+
+/* ==========================================
+   Section Header
+   ========================================== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.section-header h2 {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    color: var(--color-dark);
+    line-height: 26.4px;
+}
+
+.link-more {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-dark);
+    transition: color 0.3s ease;
+}
+
+.link-more:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================
+   Artikel Section
+   ========================================== */
+.artikel-section {
+    padding: var(--spacing-md) 0;
+}
+
+.artikel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 var(--spacing-xl) var(--spacing-md);
+}
+
+.artikel-card {
+    background-color: var(--color-white);
+    display: flex;
+    box-shadow: 0 13px 9.5px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artikel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.artikel-card img {
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+    flex-shrink: 0;
+    object-position: center;
+}
+
+.artikel-content {
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    flex: 1;
+}
+
+.artikel-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.artikel-date {
+    font-size: 14px;
+    line-height: 19.6px;
+    color: var(--color-primary);
+}
+
+.artikel-arrow {
+    font-size: 14px;
+    color: var(--color-primary);
+}
+
+.artikel-title {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.artikel-excerpt {
+    font-size: 16px;
+    line-height: 22.4px;
+    color: var(--color-gray);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==========================================
+   Prestasi Section
+   ========================================== */
+.prestasi-section {
+    background-color: var(--color-bg-light);
+    padding: var(--spacing-xl) 0;
+}
+
+.prestasi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-xl);
+}
+
+.prestasi-card {
+    background-color: var(--color-white);
+    box-shadow: 0 13px 9.5px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prestasi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prestasi-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.prestasi-content {
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.prestasi-date {
+    font-size: 14px;
+    line-height: 19.6px;
+    color: var(--color-primary);
+}
+
+.prestasi-title {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+}
+
+.prestasi-student {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+/* ==========================================
+   Ekstrakurikuler Section
+   ========================================== */
+.ekskul-section {
+    padding: var(--spacing-md) 0;
+}
+
+.ekskul-showcase {
+    padding: var(--spacing-xs) var(--spacing-xl);
+}
+
+.ekskul-card {
+    position: relative;
+    width: 100%;
+    height: 453px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.ekskul-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ekskul-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xs);
+}
+
+.ekskul-overlay h3 {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* ==========================================
+   Fasilitas Section
+   ========================================== */
+.fasilitas-section {
+    padding: var(--spacing-md) 0;
+}
+
+.fasilitas-showcase {
+    padding: var(--spacing-xs) var(--spacing-xl);
+}
+
+.fasilitas-card {
+    position: relative;
+    width: 100%;
+    height: 453px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.fasilitas-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fasilitas-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xs);
+}
+
+.fasilitas-overlay h3 {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* ==========================================
+   Footer Styles
+   ========================================== */
+.footer {
+    background-color: var(--color-bg-footer);
+    padding: var(--spacing-xl);
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 265px;
+}
+
+.footer-logo-section {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 72px;
+    height: 75px;
+}
+
+.footer-tagline {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-primary);
+}
+
+.footer-tagline p {
+    margin: 0;
+}
+
+.footer-address {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+.footer-divider {
+    width: 1px;
+    height: 186px;
+    background-color: var(--color-gray);
+}
+
+.footer-links-wrapper {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.footer-column {
+    width: 300px;
+}
+
+.footer-column h4 {
+    font-size: 20px;
+    font-weight: var(--font-bold);
+    line-height: 28px;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+.footer-contact-item {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-contact-item svg {
+    flex-shrink: 0;
+}
+
+.footer-contact-item a,
+.footer-contact-item p {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+.footer-social-title {
+    margin-top: 40px;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    :root {
+        --spacing-xl: 50px;
+    }
+
+    .navbar {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .hero-container {
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .hero-title span {
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .sambutan-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .sambutan-image {
+        width: 100%;
+        max-width: 415px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .artikel-grid {
+        padding: 0 var(--spacing-md);
+    }
+
+    .prestasi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 var(--spacing-md);
+    }
+
+    .footer-container {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: fixed;
+        top: 83px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 83px);
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+        align-items: flex-start;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.active {
+        left: 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .hero-title span {
+        margin-bottom: 15px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-start;
+        padding: var(--spacing-sm);
+    }
+
+    .artikel-grid {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    .artikel-card {
+        flex-direction: column;
+    }
+
+    .artikel-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .prestasi-grid {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-sm);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) var(--spacing-sm);
+        align-items: flex-start;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-links-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .link-more {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================
+   Utility Classes
+   ========================================== */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+.mt-5 { margin-top: var(--spacing-xl); }
+
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-xl); }
+
+/* ==========================================
+   Page Header Styles (Tentang Kami)
+   ========================================== */
+.page-header {
+    background-color: var(--color-primary);
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.page-header-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 44px;
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    line-height: normal;
+}
+
+/* ==========================================
+   School Hero Section
+   ========================================== */
+.school-hero {
+    position: relative;
+    height: 300px;
+    background-image: url('../images/sekolah-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.school-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-hero-content {
+    text-align: center;
+    padding: var(--spacing-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+
+.school-hero-content h2 {
+    font-size: 36px;
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    line-height: 35.2px;
+}
+
+.school-hero-content p {
+    font-size: 20px;
+    font-weight: var(--font-regular);
+    color: var(--color-white);
+    line-height: 28px;
+}
+
+.school-badges {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.badge {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: var(--font-bold);
+    font-size: 16px;
+    line-height: 22.4px;
+    padding: 15px 20px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+}
+
+/* ==========================================
+   Profile Content
+   ========================================== */
+.profile-content {
+    padding: var(--spacing-md) 0;
+}
+
+.profile-card {
+    background-color: var(--color-white);
+    box-shadow: 0 13px 9.5px rgba(0, 0, 0, 0.07);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-card-title {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    color: var(--color-primary);
+    line-height: 26.4px;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.profile-table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-row:last-child {
+    border-bottom: none;
+}
+
+.profile-label {
+    font-size: 20px;
+    font-weight: var(--font-bold);
+    color: var(--color-dark);
+    line-height: 28px;
+    width: 350px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.profile-value {
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    color: var(--color-gray);
+    line-height: normal;
+    flex: 1;
+    text-align: center;
+}
+
+/* ==========================================
+   Responsive - Page Header & Profile
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .school-hero-content h2 {
+        font-size: 28px;
+    }
+
+    .school-hero-content p {
+        font-size: 18px;
+    }
+
+    .school-badges {
+        gap: var(--spacing-sm);
+    }
+
+    .badge {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .profile-card {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .profile-label {
+        width: 250px;
+        font-size: 18px;
+    }
+
+    .profile-value {
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .page-header {
+        padding: var(--spacing-sm);
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .school-hero {
+        height: auto;
+        min-height: 250px;
+    }
+
+    .school-hero-content h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .school-hero-content p {
+        font-size: 16px;
+    }
+
+    .school-badges {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        width: 100%;
+    }
+
+    .badge {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-card {
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .profile-card-title {
+        font-size: 24px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .profile-row {
+        flex-direction: column;
+        gap: 5px;
+        padding: var(--spacing-sm) 0;
+        text-align: center;
+    }
+
+    .profile-label {
+        width: 100%;
+        font-size: 16px;
+        font-weight: var(--font-bold);
+        color: var(--color-dark);
+    }
+
+    .profile-value {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .school-hero-content h2 {
+        font-size: 20px;
+    }
+
+    .profile-card-title {
+        font-size: 20px;
+    }
+
+    .profile-label,
+    .profile-value {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   Navbar Dropdown Menu
+   ========================================== */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xs) 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: var(--spacing-xs);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--color-dark);
+    font-size: 16px;
+    line-height: 22.4px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(64, 143, 217, 0.1);
+    color: var(--color-primary);
+}
+
+.dropdown-item.active {
+    color: var(--color-primary);
+    font-weight: var(--font-bold);
+    background-color: rgba(64, 143, 217, 0.05);
+}
+
+/* ==========================================
+   History Text Styles
+   ========================================== */
+.history-text {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+    text-align: center;
+}
+
+.history-text p {
+    margin-bottom: 1em;
+}
+
+.history-text p:last-child {
+    margin-bottom: 0;
+}
+
+.history-text ul {
+    list-style: disc;
+    padding-left: 40px;
+    text-align: left;
+    margin: 1em auto;
+    max-width: 800px;
+}
+
+.history-text ul li {
+    margin-bottom: 0.5em;
+    line-height: 25.2px;
+}
+
+/* ==========================================
+   Responsive - Dropdown Menu
+   ========================================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .nav-dropdown .nav-link {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        max-height: 200px;
+        padding: var(--spacing-xs) 0;
+    }
+
+    .nav-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-item {
+        padding: var(--spacing-xs) var(--spacing-md);
+        margin-left: var(--spacing-sm);
+        font-size: 16px;
+    }
+
+    .history-text ul {
+        padding-left: 30px;
+    }
+}
+
+/* ==========================================
+   Visi & Misi Styles
+   ========================================== */
+.visi-card {
+    background: linear-gradient(135deg, #e4ffff 0%, #d0f5ff 100%);
+    box-shadow: 0 13px 9.5px rgba(0, 0, 0, 0.07);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visi-card-title {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    color: var(--color-primary);
+    line-height: 26.4px;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.visi-content {
+    text-align: center;
+}
+
+.visi-content p {
+    font-size: 18px;
+    line-height: normal;
+    color: var(--color-dark);
+    font-weight: var(--font-regular);
+    margin: 0;
+}
+
+.misi-content {
+    text-align: center;
+}
+
+.misi-content ol {
+    list-style: decimal;
+    padding-left: 40px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+.misi-content ol li {
+    margin-bottom: 0.8em;
+}
+
+.misi-content ol li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Struktur (Organizational Chart) Styles
+   ========================================== */
+.struktur-content {
+    padding: var(--spacing-md) 0;
+}
+
+.container-struktur {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.struktur-card {
+    background-color: var(--color-white);
+    box-shadow: 0 13px 9.5px rgba(0, 0, 0, 0.07);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.struktur-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.struktur-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+}
+
+/* ==========================================
+   Responsive - Visi Misi & Struktur
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .visi-card-title {
+        font-size: 24px;
+    }
+
+    .visi-content p {
+        font-size: 16px;
+    }
+
+    .misi-content ol {
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .container-struktur {
+        padding: 0 var(--spacing-md);
+    }
+
+    .struktur-card {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .visi-card {
+        padding: var(--spacing-sm);
+    }
+
+    .visi-card-title {
+        font-size: 20px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .visi-content p {
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+
+    .misi-content ol {
+        font-size: 16px;
+        padding-left: 25px;
+        max-width: 100%;
+    }
+
+    .container-struktur {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .struktur-card {
+        padding: var(--spacing-sm);
+    }
+
+    .struktur-image {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .visi-content p {
+        font-size: 14px;
+    }
+
+    .misi-content ol {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+/* ==========================================
+   Page Header (Akademik Pages)
+   ========================================== */
+
+.page-header {
+    background-color: var(--color-primary);
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.page-header-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header h1 {
+    font-size: 44px;
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    line-height: normal;
+}
+
+/* ==========================================
+   Akademik Hero Section
+   ========================================== */
+
+.akademik-hero {
+    position: relative;
+    height: 300px;
+    background-image: url('../images/hero-akademik.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.akademik-hero-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.akademik-hero-title {
+    font-size: 36px;
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    line-height: 35.2px;
+    margin-bottom: 0;
+}
+
+.akademik-hero-subtitle {
+    font-size: 20px;
+    font-weight: var(--font-regular);
+    color: var(--color-white);
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.akademik-badges {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.akademik-badge {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: var(--font-bold);
+    line-height: 22.4px;
+    padding: 15px 20px;
+    border-radius: var(--radius-sm);
+}
+
+/* ==========================================
+   Tenaga Pendidik Section
+   ========================================== */
+
+.tenaga-pendidik-section {
+    padding: var(--spacing-md) 0;
+}
+
+.tenaga-pendidik-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.tenaga-pendidik-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: var(--spacing-xs);
+}
+
+.teacher-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teacher-card img {
+    width: 100%;
+    height: 298px;
+    object-fit: cover;
+}
+
+.teacher-info {
+    padding: var(--spacing-sm);
+    text-align: center;
+    width: 100%;
+}
+
+.teacher-info h3 {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.teacher-info p {
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    line-height: 25.2px;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+/* ==========================================
+   Prestasi Siswa Section (Akademik)
+   ========================================== */
+
+.prestasi-akademik-section {
+    padding: var(--spacing-md) 0;
+}
+
+.prestasi-akademik-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.prestasi-akademik-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+.prestasi-akademik-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.prestasi-akademik-item img {
+    width: 100%;
+    height: 348px;
+    object-fit: cover;
+}
+
+.prestasi-akademik-content {
+    padding: var(--spacing-sm);
+}
+
+.prestasi-akademik-date {
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    line-height: 19.6px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.prestasi-akademik-title {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.prestasi-akademik-student {
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    line-height: 25.2px;
+    color: var(--color-gray);
+}
+
+.prestasi-akademik-student p {
+    margin: 0;
+    line-height: 25.2px;
+}
+
+/* ==========================================
+   Responsive - Akademik Pages
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .page-header {
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .akademik-hero-title {
+        font-size: 30px;
+    }
+
+    .akademik-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .akademik-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tenaga-pendidik-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .prestasi-akademik-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tenaga-pendidik-card,
+    .prestasi-akademik-card {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .page-header {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .akademik-hero {
+        height: auto;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .akademik-hero-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .akademik-hero-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .akademik-badges {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .akademik-badge {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .tenaga-pendidik-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .prestasi-akademik-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-card img {
+        height: 250px;
+    }
+
+    .prestasi-akademik-item img {
+        height: 280px;
+    }
+
+    .tenaga-pendidik-card,
+    .prestasi-akademik-card {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .akademik-hero-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .akademik-hero-subtitle {
+        font-size: 14px;
+    }
+
+    .teacher-info h3,
+    .teacher-info p,
+    .prestasi-akademik-title,
+    .prestasi-akademik-student {
+        font-size: 16px;
+    }
+
+    .prestasi-akademik-date {
+        font-size: 12px;
+    }
+}
+/* ==========================================
+   Ekstrakurikuler Section
+   ========================================== */
+
+.ekstrakurikuler-section {
+    padding: var(--spacing-md) 0;
+}
+
+.ekstrakurikuler-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.ekstrakurikuler-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.ekskul-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.ekskul-item img {
+    width: 224px;
+    height: 298px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.ekskul-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.ekskul-content h3 {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.ekskul-content p {
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    line-height: 25.2px;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+/* ==========================================
+   Struktur OSIS Section
+   ========================================== */
+
+.struktur-osis-section {
+    padding: var(--spacing-md) 0;
+}
+
+.struktur-osis-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================
+   Artikel Kesiswaan Section
+   ========================================== */
+
+.artikel-kesiswaan-section {
+    padding: var(--spacing-md) 0;
+}
+
+.artikel-kesiswaan-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.artikel-kesiswaan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.artikel-kesiswaan-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.artikel-kesiswaan-item img {
+    width: 100%;
+    height: 348px;
+    object-fit: cover;
+}
+
+.artikel-kesiswaan-content {
+    padding: var(--spacing-sm);
+}
+
+.artikel-kesiswaan-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+.artikel-kesiswaan-date {
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    line-height: 19.6px;
+    color: var(--color-primary);
+}
+
+.artikel-kesiswaan-arrow {
+    font-size: 14px;
+    color: var(--color-primary);
+}
+
+.artikel-kesiswaan-title {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.artikel-kesiswaan-excerpt {
+    font-size: 16px;
+    font-weight: var(--font-regular);
+    line-height: 22.4px;
+    color: var(--color-gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.artikel-read-more {
+    font-size: 14px;
+    font-weight: var(--font-bold);
+    color: var(--color-primary);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: var(--spacing-xs);
+}
+
+.artikel-read-more:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Detail Artikel Section
+   ========================================== */
+
+.detail-artikel-section {
+    padding: var(--spacing-md) 0;
+}
+
+.detail-artikel-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.detail-artikel-content {
+    max-width: 1096px;
+    margin: 0 auto;
+}
+
+.detail-artikel-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.detail-artikel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-artikel-body {
+    padding: var(--spacing-sm);
+}
+
+.detail-artikel-title {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.detail-artikel-date {
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    line-height: 19.6px;
+    color: var(--color-gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.detail-artikel-text {
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    line-height: 25.2px;
+    color: var(--color-gray);
+    text-align: justify;
+    text-align-last: left;
+}
+
+.detail-artikel-text p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.btn-back-artikel {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: var(--font-bold);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    margin-top: var(--spacing-md);
+    transition: background-color 0.3s ease;
+}
+
+.btn-back-artikel:hover {
+    background-color: #3278b8;
+}
+
+/* ==========================================
+   Responsive - Kesiswaan Pages
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .ekskul-item {
+        flex-direction: column;
+    }
+
+    .ekskul-item img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .artikel-kesiswaan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ekstrakurikuler-card,
+    .struktur-osis-card,
+    .artikel-kesiswaan-card,
+    .detail-artikel-card {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ekskul-item {
+        padding: var(--spacing-sm);
+    }
+
+    .ekskul-item img {
+        height: 250px;
+    }
+
+    .ekskul-content h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .ekskul-content p {
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+
+    .artikel-kesiswaan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artikel-kesiswaan-item img {
+        height: 280px;
+    }
+
+    .detail-artikel-image {
+        height: 250px;
+    }
+
+    .detail-artikel-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .detail-artikel-text {
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+
+    .ekstrakurikuler-card,
+    .struktur-osis-card,
+    .artikel-kesiswaan-card,
+    .detail-artikel-card {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .ekskul-content h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .ekskul-content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .artikel-kesiswaan-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .artikel-kesiswaan-excerpt {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .detail-artikel-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .detail-artikel-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+/* ==========================================
+   Kegiatan Sekolah Section
+   ========================================== */
+
+.kegiatan-section {
+    padding: var(--spacing-md) 0;
+}
+
+.kegiatan-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.kegiatan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: var(--spacing-xs);
+}
+
+.kegiatan-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.kegiatan-item:hover {
+    transform: translateY(-5px);
+}
+
+.kegiatan-item img {
+    width: 100%;
+    height: 224px;
+    object-fit: cover;
+}
+
+.kegiatan-title {
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+.kegiatan-title h3 {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.kegiatan-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(64, 143, 217, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.kegiatan-item:hover .kegiatan-overlay {
+    opacity: 1;
+}
+
+/* ==========================================
+   Detail Kegiatan Section
+   ========================================== */
+
+.detail-kegiatan-section {
+    padding: var(--spacing-md) 0;
+}
+
+.detail-kegiatan-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.detail-kegiatan-content {
+    max-width: 1096px;
+    margin: 0 auto;
+}
+
+.detail-kegiatan-title {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.detail-kegiatan-image {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+}
+
+.detail-kegiatan-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+}
+
+.btn-back-kegiatan {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: var(--font-bold);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    margin-top: var(--spacing-sm);
+    transition: background-color 0.3s ease;
+}
+
+.btn-back-kegiatan:hover {
+    background-color: #3278b8;
+}
+
+/* ==========================================
+   Fasilitas Galeri Section
+   ========================================== */
+
+.fasilitas-galeri-section {
+    padding: var(--spacing-md) 0;
+}
+
+.fasilitas-galeri-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.fasilitas-galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: var(--spacing-xs);
+}
+
+.fasilitas-galeri-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fasilitas-galeri-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.fasilitas-galeri-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fasilitas-galeri-title {
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+.fasilitas-galeri-title h3 {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    line-height: 25.2px;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+/* ==========================================
+   Kontak Section
+   ========================================== */
+
+.kontak-section {
+    padding: var(--spacing-md) 0;
+}
+
+.kontak-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.kontak-info-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.kontak-banner {
+    background-image: url('../images/kontak-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 453px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.kontak-banner-content {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.kontak-banner-content p {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    margin-bottom: var(--spacing-md);
+}
+
+.kontak-banner-content h2 {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    margin: 0;
+}
+
+.kontak-lokasi-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 13px 9.5px rgba(0, 0, 0, 0.07);
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.kontak-lokasi-title {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+    line-height: 26.4px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.kontak-map {
+    width: 100%;
+    height: 350px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+/* ==========================================
+   Responsive - Galeri & Kontak Pages
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .kegiatan-grid,
+    .fasilitas-galeri-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .kontak-banner {
+        height: 400px;
+    }
+
+    .kontak-banner-content p,
+    .kontak-banner-content h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .kegiatan-card,
+    .detail-kegiatan-card,
+    .fasilitas-galeri-card,
+    .kontak-info-card,
+    .kontak-lokasi-card {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .kegiatan-grid,
+    .fasilitas-galeri-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .kegiatan-item img {
+        height: 200px;
+    }
+
+    .fasilitas-galeri-item {
+        height: 300px;
+    }
+
+    .kontak-banner {
+        height: auto;
+        min-height: 300px;
+        padding: var(--spacing-md);
+    }
+
+    .kontak-banner-content p,
+    .kontak-banner-content h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .kontak-map {
+        height: 300px;
+    }
+
+    .detail-kegiatan-title,
+    .kontak-lokasi-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .kegiatan-card,
+    .detail-kegiatan-card,
+    .fasilitas-galeri-card,
+    .kontak-info-card,
+    .kontak-lokasi-card {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .kegiatan-title h3,
+    .fasilitas-galeri-title h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .kontak-banner-content p,
+    .kontak-banner-content h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .detail-kegiatan-title,
+    .kontak-lokasi-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}

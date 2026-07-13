@@ -1,0 +1,68 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/**
+ * Routes untuk Website SMPN 10 Jember
+ * 
+ * Copy kode ini ke file routes/web.php di project Laravel Anda
+ */
+
+// Halaman Beranda
+Route::get('/', function () {
+    return view('pages.beranda');
+})->name('beranda');
+
+// Jika Anda ingin menambahkan halaman lain, gunakan pola yang sama:
+
+// Route::get('/tentang', function () {
+//     return view('pages.tentang');
+// })->name('tentang');
+
+// Route::get('/akademik', function () {
+//     return view('pages.akademik');
+// })->name('akademik');
+
+// Route::get('/kesiswaan', function () {
+//     return view('pages.kesiswaan');
+// })->name('kesiswaan');
+
+// Route::get('/galeri', function () {
+//     return view('pages.galeri');
+// })->name('galeri');
+
+// Route::get('/kontak', function () {
+//     return view('pages.kontak');
+// })->name('kontak');
+
+
+/**
+ * ATAU menggunakan Controller (Recommended untuk aplikasi yang lebih besar)
+ */
+
+// use App\Http\Controllers\PageController;
+
+// Route::get('/', [PageController::class, 'beranda'])->name('beranda');
+// Route::get('/tentang', [PageController::class, 'tentang'])->name('tentang');
+// Route::get('/akademik', [PageController::class, 'akademik'])->name('akademik');
+// Route::get('/kesiswaan', [PageController::class, 'kesiswaan'])->name('kesiswaan');
+// Route::get('/galeri', [PageController::class, 'galeri'])->name('galeri');
+// Route::get('/kontak', [PageController::class, 'kontak'])->name('kontak');
+
+
+/**
+ * Jika menggunakan Controller, buat controller dengan:
+ * php artisan make:controller PageController
+ * 
+ * Kemudian di PageController.php:
+ * 
+ * public function beranda() {
+ *     return view('pages.beranda');
+ * }
+ * 
+ * public function tentang() {
+ *     return view('pages.tentang');
+ * }
+ * 
+ * dst...
+ */
